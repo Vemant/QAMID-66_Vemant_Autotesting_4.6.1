@@ -2,7 +2,6 @@ package ru.netology.test;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.netology.data.DataHelper;
 import ru.netology.page.DashboardPage;
 import ru.netology.page.LoginPage;
 
@@ -14,8 +13,6 @@ public class MoneyTransferTest {
     DashboardPage dashboardPage;
     CardInfo firstCardInfo;
     CardInfo secondCardInfo;
-//    DataHelper.CardInfo firstCardInfo;
-//    DataHelper.CardInfo secondCardInfo;
 
     @BeforeEach
     void setup() {
@@ -30,8 +27,6 @@ public class MoneyTransferTest {
 
     @Test
     void shouldTransferFromFirstToSecond() {
-//        var firstCardInfo = getFitstCardInfo();
-//        var secondCardInfo = getSecondCardInfo();
         var firstCardBalance = dashboardPage.getCardBalance(firstCardInfo);
         var secondCardBalance = dashboardPage.getCardBalance(secondCardInfo);
         var amount = generateValidAmount(firstCardBalance);
