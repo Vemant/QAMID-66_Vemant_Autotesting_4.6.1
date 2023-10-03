@@ -8,6 +8,7 @@ import ru.netology.page.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static ru.netology.data.DataHelper.*;
 
 public class MoneyTransferTest {
     DashboardPage dashboardPage;
@@ -24,7 +25,7 @@ public class MoneyTransferTest {
         var verificationCode = getVerificationCode();
         dashboardPage = verificationPage.validVerify(verificationCode);
         firstCardInfo = getFirstCardInfo();
-        secondCardInfo = getSecongCardInfo();
+        secondCardInfo = getSecondCardInfo();
     }
 
     @Test
